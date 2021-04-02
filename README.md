@@ -1,24 +1,27 @@
-# vue-mocha-demo
+## vue-mocha-example
+一个基于vue-cli搭建的mocha+chai单元测试使用案例，案例代码详见test/unit/example.spec.js。
 
-## Project setup
-```
-yarn install
-```
+## 什么是单元测试？
++ 前端的单元测试就是测试功能的最小单元，比如说js的函数、vue组件的某个具体业务。
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
++ 建议：在做单元测试时，最好只关注其输入和输出，而不是只关注测试覆盖率。  
 
-### Compiles and minifies for production
-```
-yarn build
-```
++ 场景：功能函数、核心模块、公共的类。
 
-### Run your unit tests
-```
-yarn test:unit
-```
+## 用到的js库
++ Mocha 是一个单元测试框架
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
++ chai是一个断言库
+
++ Vue Test Utils 是 Vue.js 官方的单元测试实用工具库，主要方便测试vue组件。
+
+## 常用的语法
+`describe`块称为"测试套件"（test suite），表示一组相关的测试。它是一个函数，第一个参数是测试套件的名称（"加法函数的测试"），第二个参数是一个实际执行的函数。
+
+`it`块称为"测试用例"（test case），表示一个单独的测试，是测试的最小单位。它也是一个函数，第一个参数是测试用例的名称（"1 加 1 应该等于 2"），第二个参数是一个实际执行的函数。
+
+`.expect`是断言库`chai`中的函数，断言语句的开始
+
+`.contains`用来验证是否包含
+
+`.equal`应该算是验证里面用得最多的方法了，用来验证两个对象是否相等

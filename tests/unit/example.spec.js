@@ -1,5 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { expect } from 'chai'
+//引入全局的插件，比如vuex bus，并在组件挂载的时候使用
+import { localPlugins } from '@/utils/vue-plugins'
 
 import { Utils } from '@/utils/utils.js'
 import Example from '@/components/example.vue'
@@ -22,8 +24,8 @@ describe('Utils工具函数的测试', () => {
 
 
 describe('Example组件的测试', () => {
-    // 现在挂载组件，你便得到了这个包裹器
-    const wrapper = mount(Example)
+    // 现在挂载组件，你便得到了这个包裹器 就是将组件渲染出来 vm就是整个界面
+    const wrapper = mount(Example,localPlugins()) 
   
     it('断言html包含div元素', () => {
         console.log(wrapper.html())

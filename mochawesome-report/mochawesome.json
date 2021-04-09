@@ -1,0 +1,253 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 8,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-09T07:03:52.063Z",
+    "end": "2021-04-09T07:03:53.116Z",
+    "duration": 1053,
+    "testsRegistered": 8,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0462a0ac-9d55-4425-9001-fdda7158f669",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9c4591e0-2e69-4b16-92fd-8addebc17b90",
+          "title": "Utils工具函数的测试",
+          "fullFile": "/Users/lizhe/workspace/myProject/vue-mocha-demo/dist/js/main.js",
+          "file": "/dist/js/main.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1+1应该等于2",
+              "fullTitle": "Utils工具函数的测试 1+1应该等于2",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _chai.expect)(add(1, 1)).to.equal(2);",
+              "err": {},
+              "uuid": "4c909ab3-d685-467a-9ee5-e4d886822af3",
+              "parentUUID": "9c4591e0-2e69-4b16-92fd-8addebc17b90",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "异步请求1+1等于2",
+              "fullTitle": "Utils工具函数的测试 异步请求1+1等于2",
+              "timedOut": false,
+              "duration": 1003,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "asyncAdd(1, 1).then(res => {\n  (0, _chai.expect)(res).to.equal(2);\n  done();\n});",
+              "err": {},
+              "uuid": "301e99fe-4ebb-4b79-a51e-d8b1a09fdb11",
+              "parentUUID": "9c4591e0-2e69-4b16-92fd-8addebc17b90",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4c909ab3-d685-467a-9ee5-e4d886822af3",
+            "301e99fe-4ebb-4b79-a51e-d8b1a09fdb11"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1004,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+          "title": "Example组件的测试",
+          "fullFile": "/Users/lizhe/workspace/myProject/vue-mocha-demo/dist/js/main.js",
+          "file": "/dist/js/main.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "断言html包含div元素",
+              "fullTitle": "Example组件的测试 断言html包含div元素",
+              "timedOut": false,
+              "duration": 18,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log(wrapper.html());\n(0, _chai.expect)(wrapper.html()).contains('div');",
+              "err": {},
+              "uuid": "07cb4c1c-d9e3-413a-8199-a3909f3f550e",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "断言html包含button",
+              "fullTitle": "Example组件的测试 断言html包含button",
+              "timedOut": false,
+              "duration": 9,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//判断contains的返回值是不是等于true\n(0, _chai.expect)(wrapper.contains('button')).to.equal(true);",
+              "err": {},
+              "uuid": "62e8dcaa-e6cd-4c66-91f9-ca8266380730",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "触发click事件,断言count增加",
+              "fullTitle": "Example组件的测试 触发click事件,断言count增加",
+              "timedOut": false,
+              "duration": 6,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _chai.expect)(wrapper.vm.count).to.equal(0); //获取button按钮 .add为指定class为add的button标签\nconst button = wrapper.find('button.add'); //触发click事件\nbutton.trigger('click');\n(0, _chai.expect)(wrapper.vm.count).to.equal(1);",
+              "err": {},
+              "uuid": "f75c2c90-303b-4dc4-a78d-b0e1dc0b57e8",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "触发click事件,断言count增加,并且dom的数据更新",
+              "fullTitle": "Example组件的测试 触发click事件,断言count增加,并且dom的数据更新",
+              "timedOut": false,
+              "duration": 2,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _chai.expect)(wrapper.text()).contains('1');\nconst button = wrapper.find('button');\nbutton.trigger('click');\nwrapper.vm.$nextTick(() => {\n  (0, _chai.expect)(wrapper.text()).contains('2');\n  done();\n});",
+              "err": {},
+              "uuid": "2b3a9c72-4987-4c2a-812c-8bbc9f8e8c83",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "触发子组件的事件后，断言出现div的内容",
+              "fullTitle": "Example组件的测试 触发子组件的事件后，断言出现div的内容",
+              "timedOut": false,
+              "duration": 3,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "wrapper.findComponent(_exampleChild.default).vm.$emit('custom');\nwrapper.vm.$nextTick(() => {\n  (0, _chai.expect)(wrapper.html()).contains('isemit');\n  done();\n});",
+              "err": {},
+              "uuid": "e4671351-2b80-40e0-a790-3087bed72825",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "测试修改props和data里数据",
+              "fullTitle": "Example组件的测试 测试修改props和data里数据",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "wrapper.setData({\n  count: 10\n});\n(0, _chai.expect)(wrapper.vm.count).to.equal(10);\nawait wrapper.setProps({\n  foo: 'bar'\n});\n(0, _chai.expect)(wrapper.vm.foo).to.equal('bar');",
+              "err": {},
+              "uuid": "d6faec99-64ac-428c-b0fc-8e1a87039efb",
+              "parentUUID": "6dcd58d2-949b-4c7d-a3c1-65c190776b5f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "07cb4c1c-d9e3-413a-8199-a3909f3f550e",
+            "62e8dcaa-e6cd-4c66-91f9-ca8266380730",
+            "f75c2c90-303b-4dc4-a78d-b0e1dc0b57e8",
+            "2b3a9c72-4987-4c2a-812c-8bbc9f8e8c83",
+            "e4671351-2b80-40e0-a790-3087bed72825",
+            "d6faec99-64ac-428c-b0fc-8e1a87039efb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 39,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {},
+      "version": "5.2.0"
+    }
+  }
+}

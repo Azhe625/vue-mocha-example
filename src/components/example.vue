@@ -10,6 +10,7 @@
 
 <script>
 import ExampleChild from './example-child.vue'
+import { mapState } from 'vuex'
 export default {
   name: 'example',
   props:{
@@ -24,12 +25,14 @@ export default {
    }
   },
   mounted () {
-      console.log('生命周期被触发')
+      console.log('生命周期被触发',this.lockInfo)
   },
   components:{
       ExampleChild
   },
-  computed: {},
+  computed: {
+    ...mapState("map",['lockInfo'])
+  },
   watch: {},
   methods: {
     handleAdd() {

@@ -1,7 +1,16 @@
 ## vue-mocha-example
-一个基于vue-cli搭建的mocha+chai单元测试使用案例，案例代码详见test/unit/example.spec.js。
+一个基于vue-cli搭建的mocha+chai单元测试使用案例  
 
-## 通过案例可以学到什么？
-1.mocha工具、chai断言的基本语法
-3.测试vue组件、js类
-4.测试全局的插件，比如vuex\bus\router等
+## 案例中包括以下内容
+1.mocha工具、chai断言的基本语法  
+2.测试vue组件、js函数
+3.测试全局的插件，比如vuex\bus\router等
+4.产出测试报告
+
+## 运行
+```js
+    //安装依赖
+    yarn //或者npm install
+    //运行测试:unit
+    npm run test
+```
